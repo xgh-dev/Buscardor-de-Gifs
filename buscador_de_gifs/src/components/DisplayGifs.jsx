@@ -12,13 +12,11 @@ const DisplayGifs = ({category}) => {
     return (
         <>
         <div className="container-gifs">
-            <h2>Display</h2>
             {
                 loading ? data.map(img => (
                     <ImageItem key={img.id} title={img.title} url={img.images.downsized_medium.url}/>
                 )) : ''
             }
-            <p>{category}</p>
         </div>
         </>
     )
