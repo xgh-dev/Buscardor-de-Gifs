@@ -1,29 +1,29 @@
-import { useState } from 'react'
-import AddCategory from './components/AddCategory'
-import DisplayGifs from './components/DisplayGifs';
-import './App.css'
-
-//api key: jtnJKSoEW38w7R1CRZVz5WUkpTxUldKg
-//gif url: api.giphy.com/v1/gifs/search	
-
+import { useState } from "react";
+import AddCategory from "./components/AddCategory";
+import DisplayGifs from "./components/DisplayGifs";
+import "./App.css";
 
 function App() {
-  const [category,setCategory] = useState('');
-
-  const apiKey = 'VDrT08ZDURrHK9LuQk59v4j00tVgJf5c'
-  //definir el endPoint de la api
-  const urlApi = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${category}&limit=5`;
-
+  const [category, setCategory] = useState("");
 
   return (
     <>
-      <div className='App'>
-        <h2>Main component</h2>
-        <AddCategory setCategory={setCategory}/>
-        <DisplayGifs category={category}/>
+      <div className="App">
+        <h2>Buscardor de Gifs</h2>
+        <AddCategory setCategory={setCategory} />
+        {/* Llama a la función en lugar de pasarla directamente */}
+        {/* category !== "" && <DisplayGifs category={category} /> */}
+        {category !== '' ? (<DisplayGifs category={category} />):null}
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+
+
+/*
+
+
+*/
