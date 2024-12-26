@@ -9,8 +9,8 @@ const useApi = (url) => {
       .then((respuesta) => respuesta.json())
       .then((respuestaJson) => {
         //console.log(respuestaJson);
-        setLoading(true)
-        setData(respuestaJson.data)
+        setLoading(true);
+        setData(respuestaJson.data);
         console.log(respuestaJson);
       })
       .catch((error) => console.log(error));
@@ -18,8 +18,7 @@ const useApi = (url) => {
 
   useEffect(() => {
     fetchApi();
-  },[url]);
-
+  }, [url]);
 
   return { loading, data };
 };
