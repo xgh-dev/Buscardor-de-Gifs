@@ -22,7 +22,7 @@ const AddCategory = ({setCategory}) => {
         <>
         <form onSubmit={buscarGif}>
             <input type="text" placeholder="Buscar..." onChange={e => setValue(e.target.value)} value={value}/>
-            <input type="submit" />
+            <input type="submit" className="buscarInput" value='Enviar'/>
         </form>
         {error ? <p className="error">El campo no puede estar vacio</p>:''}
         </>
